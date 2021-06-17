@@ -2,12 +2,11 @@
 
 
 #### Plugin di Flask aggiuntivi:
-========================
 
-pip install -U flask-paginate
+*pip install -U flask-paginate*
 
 
-pip install flask_login
+*pip install flask_login*
 
 
 
