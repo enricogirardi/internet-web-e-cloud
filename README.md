@@ -46,6 +46,7 @@ mobile first, o con poche semplici varianti.
 ================================================
 
 https://github.com/enricogirardi/internet-web-e-cloud/blob/main/3.%20Saas_%20_in%20morte%20di%20una%20Web%20Agency_.pdf
+
 In questa slide si propone una piccola tesi: quella degli ultimi CMS che saranno 
 soppiantati a breve dai servizi Saas, rendendo de facto inutile la competenza tecnica
 per la maggior parte dei siti web "di base" a competenza delle PMI (piccole medio imprese), 
@@ -58,6 +59,7 @@ e facendo sopravvivere solamente le poche eccellenze tecniche in riferimento ad 
 ================================================
 
 https://github.com/enricogirardi/internet-web-e-cloud/blob/main/4.%20DNS%20e%20IP%20BLACKLIST.pdf
+
 Sconfitti definitivamente dai Saas, che sono effettivamente più sicuri, 
 analizziamo uno dei rischi dei CMS tradizionali. 
 In definitiva, uno dei pro decisamente importante dei Saas, sarà proprio
