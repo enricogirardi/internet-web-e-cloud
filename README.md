@@ -1,22 +1,23 @@
-# internet-web-e-cloud
+## internet-web-e-cloud
 
 
-Plugin di Flask aggiuntivi:
+#### Plugin di Flask aggiuntivi:
 ========================
 
 pip install -U flask-paginate
-
 
 
 pip install flask_login
 
 
 
-## IL PROGETTO SAGA
+# IL PROGETTO SAGA
 
 ========================
 
 *Il progetto  consta di quattro  parti:* 
+
+
 
 
 ### 1) Episodio VIII - Gli ultimi CMS
