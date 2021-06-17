@@ -29,7 +29,6 @@ https://startbootstrap.com/theme/freelancer
 Il sito clone StarWars, a cui è stata aggiunta una home page
 con un effetto javascript con animazione e musica, 
 e modificati i CSS. 
-
 Lo spunto del clone è che, in ottica dell'ascesa dei Saas, 
 basterà lo stesso tema di base per tipologie di siti totalmente diversi fra loro, 
 tenendo uguale la struttura, che sarà sempre la stessa sopratutto in ottica 
@@ -41,8 +40,7 @@ mobile first, o con poche semplici varianti.
 In questa slide di propone una piccola tesi: quella degli ultimi CMS che saranno 
 soppiantati a breve dai servizi Saas, rendendo de facto inutile la competenza tecnica
 per la maggior parte dei siti web "di base" a competenza delle PMI (piccole medio imprese), 
-e facendo sopravvivere solamente
-le poche eccellenze in riferimento ad aziende medio grandi. 
+e facendo sopravvivere solamente le poche eccellenze in riferimento ad aziende medio grandi. 
 
 
 
@@ -50,8 +48,7 @@ le poche eccellenze in riferimento ad aziende medio grandi.
 ========================
 Sconfitti definitivamente dai Saas ì, che sono effettivamente più sicuri, 
 analizziamo uno dei rischi dei CMS tradizionali. 
-
-In definitiva, uni dei pro decisamente importante dei Saas, sarà proprio
+In definitiva, uno dei pro decisamente importante dei Saas, sarà proprio
 quello della sicurezza.
 
 
