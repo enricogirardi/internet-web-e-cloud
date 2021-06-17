@@ -37,7 +37,7 @@ mobile first, o con poche semplici varianti.
 
 3)  Episodio IX - L'ascesa dei SaaS
 ========================
-In questa slide di propone una piccola tesi: quella degli ultimi CMS che saranno 
+In questa slide si propone una piccola tesi: quella degli ultimi CMS che saranno 
 soppiantati a breve dai servizi Saas, rendendo de facto inutile la competenza tecnica
 per la maggior parte dei siti web "di base" a competenza delle PMI (piccole medio imprese), 
 e facendo sopravvivere solamente le poche eccellenze in riferimento ad aziende medio grandi. 
