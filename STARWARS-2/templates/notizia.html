@@ -1,0 +1,114 @@
+{%  extends 'base.html' %}
+
+{% block pagina %}
+
+    <div class='mtop5'></div>
+
+   <!-- SPONSOR  Section-->
+    {% include '_partials/sponsor.html' %}
+
+    <!-- INTRO  Section-->
+    {% include '_partials/intro.html' %}
+
+
+         {% for row in rows %}
+    <!-- NOTIZIA Section-->
+    <section id="notizia">
+          <div class="container">
+            <div class="row">
+                <!-- Post content-->
+                <div class="col-lg-8">
+                    <!-- Title-->
+                    <h1 class="mt-4">{{ row["titolo"]}}</h1>
+                    <hr />
+                    <!-- image-->
+                    <img class="img-fluid" src="../../static/assets/img/foto/{{row['immagine']}}" alt="{{ row["titolo"]}}" />
+
+                    <hr />
+                    <!-- Post content-->
+                    <article>
+                    <p class="lead">{{ row["descrizione"]}}</p>
+                    </article>
+
+                     <hr />
+                </div>
+
+         {% endfor %}
+
+
+                <!-- Sidebar widgets column-->
+                <div class="col-md-4">
+
+                    <!-- Categories widget-->
+                    <div class="card my-4">
+                        <h5 class="card-header"><i class="far fa-light fa-newspaper"></i>  NEWS AREA</h5>
+
+                        <!-- image-->
+                        <img class="img-fluid" src="../../static/assets/img/foto/open-uri20150608-27674-u9edei_827be8e5.jpeg" alt="Eventi" />
+
+                        <div class="card-body">
+                            <div class="row">
+                             <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="{{ url_for('notizie_area', area='cinema') }}">Cinema</a></li>
+                                    <li><a href="{{ url_for('notizie_area', area='theater') }}">Theater</a></li>
+                                    <li><a href="{{ url_for('notizie_area', area='arte') }}">Art</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="{{ url_for('notizie_area', area='architettura') }}">Games</a></li>
+                                    <li><a href="{{ url_for('notizie_area', area='danza') }}">Dance</a></li>
+                                    <li><a href="{{ url_for('notizie_area', area='musica') }}">Music</a></li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Eventi widget-->
+                    <div class="card my-4">
+                        <h5 class="card-header"><i class="far fa-solid fa-comments"></i>  EVENTS AREA</h5>
+
+                        <!-- image-->
+                        <img class="img-fluid" src="../../static/assets/img/foto/open-uri20150608-27674-1cb3yi_0672ce34.jpeg" alt="Eventi" />
+
+                        <div class="card-body">
+                            <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="{{ url_for('eventi_area', area='cinema') }}">Cinema</a></li>
+                                    <li><a href="{{ url_for('eventi_area', area='theater') }}">Theater</a></li>
+                                    <li><a href="{{ url_for('eventi_area', area='arte') }}">Art</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="{{ url_for('eventi_area', area='architettura') }}">Games</a></li>
+                                    <li><a href="{{ url_for('eventi_area', area='danza') }}">Series</a></li>
+                                    <li><a href="{{ url_for('eventi_area', area='musica') }}">Music</a></li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Eventi widget-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- About Section-->
+    {% include '_partials/about.html' %}
+
+
+
+
+{% endblock %}

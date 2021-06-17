@@ -1,0 +1,55 @@
+{%  extends 'base.html' %}
+
+
+
+
+{% block codicicustom %}
+     <link href="../static/css/starintro.css" rel="stylesheet" />
+     <script src="../static/js/starwars.js"></script>
+{% endblock %}
+
+
+
+
+{% block pagina %}
+
+<article class="starwars">
+    <div class="container">
+
+        <div class="logo">
+                 <a href="#">
+            <img src="../static/assets/img/star-wars-logo.svg" alt="star wars" style="">
+                </a>
+        </div>
+
+        <div class="fade"></div>
+
+
+        <section class="star-wars">
+          <div class="crawl">
+            <div class="title">
+              <p>Episode IV</p>
+              <h1>A New Hope</h1>
+            </div>
+            <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
+            <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
+            <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy…</p>
+          </div>
+        </section>
+
+
+          <audio preload="auto">
+            <source src="/static/assets/audio/StarWars.ogg" type="audio/ogg" />
+            <source src="/static/assets/audio/StarWars.mp3" type="audio/mpeg" />
+          </audio>
+
+
+
+
+
+
+
+ </div>
+</article>
+
+{% endblock %}

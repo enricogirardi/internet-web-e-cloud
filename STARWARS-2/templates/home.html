@@ -1,0 +1,62 @@
+{%  extends 'base.html' %}
+
+{% block pagina %}
+
+        <!-- HEADER Section-->
+        {% include '_partials/header1.html' %}
+
+        <!-- INTRO  Section-->
+        {% include '_partials/intro.html' %}
+
+       <!-- SPONSOR  Section-->
+        {% include '_partials/sponsor.html' %}
+
+        <!-- AREE TEMATICHE Section-->
+        {% include '_partials/aree.html' %}
+
+       <!-- Middle Section-->
+        {% include '_partials/middle1.html' %}
+
+
+     <section class="page-section portfolio" id="news">
+            <div class="container">
+
+                <div class="lb-surtitle left-aligned">
+                  <h2>News</h2>
+                </div>
+
+
+                <!-- News Grid Items-->
+                <div class="row justify-content-center">
+
+         {% for row in rows %}
+
+                    <!-- Notizia -->
+                    <div class="col-md-6 col-lg-4">
+
+                        <div class="portfolio-item mx-auto" data-toggle="modal" >
+
+                             <a href="{{ url_for('notizia', id=row["id"]) }}">
+
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            </a>
+                            <img class="img-fluid" src="../../static/assets/img/foto/{{row['immagine']}}" alt="{{ row["titolo"]}}" />
+
+                            <div class="lb-category">{{ row["area"]}}</div>
+                            <div class="lb-item-title">{{ row["titolo"]}}</div>
+                        </div>
+
+                    </div>
+
+         {% endfor %}
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About Section-->
+        {% include '_partials/about.html' %}
+
+{% endblock %}

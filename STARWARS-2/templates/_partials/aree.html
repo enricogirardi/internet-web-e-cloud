@@ -1,0 +1,73 @@
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+
+                <div class="lb-surtitle left-aligned">
+                  <h2>Events</h2>
+                </div>
+
+
+                  <!-- Aree Tematiche Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- AT Item 1-->
+                    <div class="col-md-4 col-lg-4 mb-6">
+                        <div class="portfolio-item mx-auto" >
+                            <a href="{{ url_for('eventi_area', area='cinema') }}">
+                                <img class="img-fluid" src="../static/assets/img/foto/X-Wing-Fighter_47c7c342.jpeg" alt="cinema" />
+                                <div class="lb-category">Cinema</div>
+                            </a>
+                            <div class="lb-item-title">All movies</div>
+                        </div>
+                    </div>
+                    <!-- AT Item 2-->
+                    <div class="col-md-4 col-lg-4 mb-6">
+                        <div class="portfolio-item mx-auto" >
+                            <a href="{{ url_for('eventi_area', area='theater') }}">
+                                <img class="img-fluid" src="../static/assets/img/foto/31-rogue-one-story-gallery_09c968f9.webp" alt="Teatro" />
+                                <div class="lb-category">Theater</div>
+                            </a>
+                            <div class="lb-item-title">Rappresentations</div>
+                        </div>
+                    </div>
+                    <!-- AT Item 3 -->
+                    <div class="col-md-4 col-lg-4 mb-6">
+                        <div class="portfolio-item mx-auto" >
+                            <a href="{{ url_for('eventi_area', area='dance') }}">
+                                <img class="img-fluid" src="../static/assets/img/foto/40-rogue-one-story-gallery_282851c2.webp" alt="Danza" />
+                                <div class="lb-category">Dance</div>
+                            </a>
+                            <div class="lb-item-title">All Star Wars series</div>
+                        </div>
+                    </div>
+                    <!-- AT Item 4 -->
+                    <div class="col-md-4 col-lg-4 mb-6">
+                        <div class="portfolio-item mx-auto" >
+                            <a href="{{ url_for('eventi_area', area='art') }}">
+                                <img class="img-fluid" src="../static/assets/img/foto/open-uri20150608-27674-u9edei_827be8e5.jpeg" alt="Arte" />
+                                <div class="lb-category">Art</div>
+                            </a>
+                            <div class="lb-item-title">Star Art</div>
+                        </div>
+                    </div>
+                    <!-- AT Item 5 -->
+                    <div class="col-md-4 col-lg-4 mb-6">
+                        <div class="portfolio-item mx-auto" >
+                            <a href="{{ url_for('eventi_area', area='games') }}">
+                                <img class="img-fluid" src="../static/assets/img/foto/Death-Star-I-copy_36ad2500.jpeg" alt="Architettura" />
+                                <div class="lb-category">Games</div>
+                            </a>
+                            <div class="lb-item-title">Best Star Wars games</div>
+                        </div>
+                    </div>
+                    <!-- AT Item 6 -->
+                    <div class="col-md-4 col-lg-4 mb-6">
+                        <div class="portfolio-item mx-auto" >
+                            <a href="{{ url_for('eventi_area', area='music') }}">
+                                <img class="img-fluid" src="../static/assets/img/foto/solo-a-star-wars-story-theatrical-poster-2_f4af9297.jpeg" alt="Musica" />
+                                <div class="lb-category">Music</div>
+                            </a>
+                            <div class="lb-item-title">Original sound track</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>

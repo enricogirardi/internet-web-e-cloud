@@ -1,0 +1,152 @@
+{%  extends 'base.html' %}
+
+
+{% block pagina %}
+
+
+     <section class="page-section portfolio" >
+            <div class="mtop3 mbot3 container">
+                <div class="lb-surtitle left-aligned">
+                  <h2>GESTIONE {{tipologia}}</h2>
+                </div>
+
+
+        <!-- Intestazione -->
+         <div class="row marg1 mbot3 justify-content-center bg-secondary text-uppercase testonero ">
+                <!-- Notizia o Evento -->
+                    <div class="col-md-1 col-sm-6">Immagine </div>
+                    <div class="col-md-2 col-sm-6">Area</div>
+                  {% if tipologia == 'Eventi' %}
+                    <div class="col-md-2 col-sm-63">Luogo</div>
+                  {% endif  %}
+                    <div class="col-md-4 col-sm-6">Titolo</div>
+                    <div class="col-md-3 col-sm-63">Azione</div>
+
+
+
+
+
+
+         </div>
+
+
+        <!-- Notizia o Evento -->
+         {% for row in rows %}
+         <div class="row marg1 justify-content-center rigaadmin">
+                    <div class="col-md-1 col-sm-6">
+                        <a href="{{ url_for(link, id=row["id"]) }}">
+                         <img class="piccole" src="../../static/assets/img/foto/{{row['immagine']}}" alt="{{ row["titolo"]}}" />
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-6 text-uppercase">{{ row["area"]}}</div>
+                  {% if tipologia == 'Eventi' %}
+                    <div class="col-md-2 col-sm-6 text-uppercase">{{ row["luogo"]}}</div>
+                  {% endif  %}
+                    <div class="col-md-4 col-sm-6">{{ row["titolo"]}}</div>
+                    <div class="col-md-3 col-sm-6">
+
+
+                  {% if tipologia == 'Eventi' %}
+                       <a href="{{ url_for('edit', tipologia='evento', username=['username'], id=row["id"]) }}" class="marg1 btn btn-warning"><i class="fas fa-edit"></i>EDIT</a>
+{#                       <a href="{{ url_for('cancella_evento', username=['username'], id=row["id"]) }}" class="marg1 btn btn-danger">DEL</a>#}
+                        <div class="btn btn-danger" data-toggle="modal" data-target="#portfolioModal{{ row["id"] }}">
+                            <i class="fas fa-trash-alt"></i> CANC
+                        </div>
+                  {% endif  %}
+
+                  {% if tipologia == 'Notizie' %}
+                      <a href="{{ url_for('edit', tipologia='notizia', username=['username'], id=row["id"]) }}" class="marg1 btn btn-warning"><i class="fas fa-edit"></i>EDIT</a>
+{#                       <a href="{{ url_for('cancella_notizia', username=['username'], id=row["id"]) }}" class="marg1 btn btn-danger">DEL</a>#}
+                        <div class="btn btn-danger " data-toggle="modal" data-target="#portfolioModal{{ row["id"] }}">
+                           <i class="fas fa-trash-alt"></i> CANC
+                        </div>
+                  {% endif  %}
+
+
+
+                    </div>
+         </div>
+
+
+          {% endfor %}
+         {% for row in rows %}
+
+         <!-- AVVISO SUL DELETE -->
+        <div class="portfolio-modal modal fade" id="portfolioModal{{ row["id"] }}" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">
+                                        Sicuro sicuro?</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+
+                                    <!-- Modal - Text-->
+                                    <p class="mb-5">Cancellando il tuo articolo sarà perso per sempre!</p>
+
+                                    {% if tipologia == 'Eventi' %}
+                                        <a href="{{ url_for('cancella_evento', username=['username'], id=row["id"]) }}" class="marg1 btn btn-danger">
+                                            Ho compreso e cancello l'Evento</a>
+                                    {%  endif %}
+
+                                  {% if tipologia == 'Notizie' %}
+                                         <a href="{{ url_for('cancella_notizia', username=['username'], id=row["id"]) }}" class="marg1 btn btn-danger">
+                                             Ho compreso e cancello la Notizia</a>
+                                  {% endif  %}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+         {% endfor %}
+
+
+
+          <!-- PAGINAZIONE -->
+         <div class="row justify-content-center" id="paginazione">
+              {{ pagination.info }}
+              {{ pagination.links }}
+         </div>
+
+
+          <!-- AGGIUNTA NUOVO EVENTO -->
+         <div class="row ">
+             <a href="{{ url_for('nuovo', tipologia=link) }}" class="marg1 btn btn-success text-uppercase"><i class="fas fa-pencil-alt"></i> NUOVO CONTENUTO: {{ link }}</a>
+        </div>
+
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+{% endblock %}
+
+

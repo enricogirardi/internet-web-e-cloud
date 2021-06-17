@@ -1,0 +1,86 @@
+{%  extends 'base.html' %}
+
+{% block pagina %}
+    <div class='mtop5'></div>
+
+
+{% if session['username'] %}
+
+
+
+{#    <link href="{{ url_for('static', filename='css/admin.css') }}" rel="stylesheet" />#}
+
+
+    <div class="row mtop5 col-12 justify-content-center">
+         <h2>Amministrazione</h2>
+    </div>
+
+
+    <div class="row mtop5 justify-content-center">
+
+         <div class="col-4 text-align-center align-items-center">
+             <!-- image-->
+             <img class="img-fluid mbot3" src="../../static/assets/img/foto/redc-20.jpg" alt="Ammistrazione" />
+             <a href="{{ url_for('admin_eventi', username=['username']) }}" class="marg1 btn btn-primary">GESTIONE EVENTI</a>
+             <a href="{{ url_for('admin_notizie', username=['username']) }}" class="marg1 btn btn-primary">GESTIONE NOTIZIE</a>
+         </div>
+
+         <div class="col-4  text-align-center align-items-center">
+             <!-- image-->
+             <img class="img-fluid mbot3" src="../../static/assets/img/foto/arte-temp-19.jpg" alt="Logout" />
+             <a href="{{ url_for('logout') }}" class="marg1 btn btn-primary">LOGOUT</a>
+        </div>
+
+    </div>
+
+{% else %}
+
+
+<div class=" row justify-content-center">
+  <div class="col-md-4 col-md-offset-4">
+  <form method="POST" action="/login">
+    <h2>Log In</h2>
+    <div class="form-group">
+      <label for="username">username</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        name="username"
+        placeholder="username"
+        value="username"
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        placeholder="password"
+        value="password"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Log In</button>
+  </form>
+ </div>
+</div>
+{% endif %}
+
+
+ <div class=" row justify-content-center">
+    <div class="col-md-4 col-md-offset-4">
+    {% for message in get_flashed_messages() %}
+      <div class="alert-error">{{ message }}</div>
+    {% endfor %}
+    </div>
+</div>
+
+
+
+ <div class='mtop5'></div>
+{% include '_partials/header2.html' %}
+
+{% endblock %}

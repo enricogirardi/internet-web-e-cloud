@@ -1,0 +1,73 @@
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+
+                <div class="lb-surtitle left-aligned">
+                  <h2>Aree Tematiche Eventi</h2>
+                </div>
+
+
+                  <!-- Aree Tematiche Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- AT Item 1-->
+                    <div class="col-md-4 col-lg-4 mb-6">
+                        <div class="portfolio-item mx-auto" >
+                            <a href="{{ url_for('eventi_area', area='cinema') }}">
+                                <img class="img-fluid" src="../static/assets/img/foto/redc-20.jpg" alt="cinema" />
+                                <div class="lb-category">Cinema</div>
+                            </a>
+                            <div class="lb-item-title">Programma Biennale Cinema 2021</div>
+                        </div>
+                    </div>
+                    <!-- AT Item 2-->
+                    <div class="col-md-4 col-lg-4 mb-6">
+                        <div class="portfolio-item mx-auto" >
+                            <a href="{{ url_for('eventi_area', area='teatro') }}">
+                                <img class="img-fluid" src="../static/assets/img/foto/nel-lago-del-cor.jpg" alt="Teatro" />
+                                <div class="lb-category">Teatro</div>
+                            </a>
+                            <div class="lb-item-title">Il nuovo bando del College Interno</div>
+                        </div>
+                    </div>
+                    <!-- AT Item 3 -->
+                    <div class="col-md-4 col-lg-4 mb-6">
+                        <div class="portfolio-item mx-auto" >
+                            <a href="{{ url_for('eventi_area', area='danza') }}">
+                                <img class="img-fluid" src="../static/assets/img/foto/room-with-a-view-b.jpg" alt="Danza" />
+                                <div class="lb-category">Danza</div>
+                            </a>
+                            <div class="lb-item-title">Il nuovo rogramma Biennale Danza</div>
+                        </div>
+                    </div>
+                    <!-- AT Item 4 -->
+                    <div class="col-md-4 col-lg-4 mb-6">
+                        <div class="portfolio-item mx-auto" >
+                            <a href="{{ url_for('eventi_area', area='arte') }}">
+                                <img class="img-fluid" src="../static/assets/img/foto/arte-temp-19.jpg" alt="Arte" />
+                                <div class="lb-category">Arte</div>
+                            </a>
+                            <div class="lb-item-title">Biennale College Arte 2021</div>
+                        </div>
+                    </div>
+                    <!-- AT Item 5 -->
+                    <div class="col-md-4 col-lg-4 mb-6">
+                        <div class="portfolio-item mx-auto" >
+                            <a href="{{ url_for('eventi_area', area='architettura') }}">
+                                <img class="img-fluid" src="../static/assets/img/foto/biennale_architettura_venezia_2021_arsenale_b.jpg" alt="Architettura" />
+                                <div class="lb-category">Architettura</div>
+                            </a>
+                            <div class="lb-item-title">Il padiglione Architettura</div>
+                        </div>
+                    </div>
+                    <!-- AT Item 6 -->
+                    <div class="col-md-4 col-lg-4 mb-6">
+                        <div class="portfolio-item mx-auto" >
+                            <a href="{{ url_for('eventi_area', area='musica') }}">
+                                <img class="img-fluid" src="../static/assets/img/foto/pmce-ensemble.jpg" alt="Musica" />
+                                <div class="lb-category">Musica</div>
+                            </a>
+                            <div class="lb-item-title">Programma Musica Biennale College</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>

@@ -1,0 +1,2 @@
+update notizie set area = REPLACE(area, 'teatro', 'theater')
+update eventi set area = REPLACE(area, 'teatro', 'theater')

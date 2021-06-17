@@ -1,0 +1,135 @@
+{%  extends 'base.html' %}
+
+{% block pagina %}
+    <div class='mtop5'></div>
+
+
+{% if not session['username'] %}
+
+
+
+    <div class="row mtop5 justify-content-center">
+
+        NON SEI AUTORIZZATO
+
+
+
+    </div>
+
+{% else %}
+
+    <div class="row mtop5  justify-content-center">
+
+         <div class="col-6 lb-surtitle left-aligned">
+          <h2>Edita: {{ tipologia }}  {{ id }}</h2>
+        </div>
+    </div>
+
+
+
+
+<div class=" row justify-content-center">
+  <div class="col-md-4 col-md-offset-4">
+  <form method="POST" action="/edit/{{ tipologia }}/{{ id }}" enctype="multipart/form-data">
+    {% for row in rows %}
+    <div class="form-group">
+      <label for="titolo">Titolo</label>
+      <input
+        type="text"
+        class="form-control"
+        id="titolo"
+        name="titolo"
+        value="{{ row["titolo"]}}"
+      />
+    </div>
+
+    <div class="form-group">
+       <label for="descrizione">Descrizione</label>
+      <textarea
+        rows="10"
+        cols="40"
+        class="form-control"
+        id="descrizione"
+        name="descrizione"
+         >{{ row["descrizione"]}}</textarea>
+    </div>
+
+
+
+
+     <div class="form-group">
+        <!-- image-->
+        <img class="piccole" src="../../static/assets/img/foto/{{row['immagine']}}" alt="{{ row["titolo"]}}" />
+         <label for="immagine"></label>
+             <input
+              type="hidden"
+              name="immagine"
+              id="immagine"
+              value="{{row['immagine']}}"
+            />
+         <p> Selezione una imagine da caricare:</p>
+            <input
+              class="form-control"
+              type="file"
+              name="immaginenuova"
+              id="immaginenuova"
+            />
+    </div>
+
+     <div class="form-group">
+
+      <label for="area">Area</label>
+      <select name="area" class="form-select form-control"  size="1" aria-label="size1 select " >
+              <option value="cinema" {% if row['area']=='cinema' %} selected="selected"{% endif %}>Cinema</option>
+              <option value="teatro" {% if row['area']=='teatro' %} selected="selected"{% endif %}>Teatro</option>
+              <option value="arte" {% if row['area']=='arte' %} selected="selected"{% endif %}>Arte</option>
+              <option value="architettura" {% if row['architettura']=='cinema' %} selected="selected"{% endif %}>Architettura</option>
+              <option value="danza" {% if row['danza']=='cinema' %} selected="selected"{% endif %}>Danza</option>
+              <option value="musica" {% if row['musica']=='cinema' %} selected="selected"{% endif %}>Musica</option>
+      </select>
+
+
+    {% if tipologia == 'evento' %}
+      <label for="luogo">Luogo</label>
+      <select name="luogo" class="form-select form-control"  size="1" aria-label="size1 select " >
+              <option value="giardini" {% if row['luogo']=='giardini' %} selected="selected"{% endif %}>Giardini</option>
+              <option value="arsenale" {% if row['luogo']=='arsenale' %} selected="selected"{% endif %}>Arsenale</option>
+              <option value="cagiustinian" {% if row['luogo']=='cagiustinian' %} selected="selected"{% endif %}>Ca giustinian</option>
+              <option value="palazzo-cinema" {% if row['luogo']=='palazzo-cinema' %} selected="selected"{% endif %}>Palazzo del cinema</option>
+              <option value="palazzo-casino" {% if row['luogo']=='palazzo-casino' %} selected="selected"{% endif %}>Palazzo del casinò</option>
+              <option value="palabiennale" {% if row['luogo']=='palabiennale' %} selected="selected"{% endif %}>Palabiennale</option>
+              <option value="sala-giardino" {% if row['luogo']=='sala-giardino' %} selected="selected"{% endif %}>Sala giardino</option>
+      </select>
+     {% endif  %}
+
+
+
+
+    </div>
+
+    {% endfor %}
+
+    <button type="submit" class="btn btn-info text-uppercase">SALVA {{ tipologia }}</button>
+  </form>
+ </div>
+</div>
+{% endif %}
+
+
+
+
+ <!-- MESSAGGGI ERRORE -->
+ <div class=" row justify-content-center">
+    <div class="col-md-4 col-md-offset-4">
+    {% for message in get_flashed_messages() %}
+      <div class="alert-error">{{ message }}</div>
+    {% endfor %}
+    </div>
+ </div>
+
+
+
+ <div class='mtop5'></div>
+{% include '_partials/header1.html' %}
+
+{% endblock %}

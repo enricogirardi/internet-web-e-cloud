@@ -1,0 +1,91 @@
+{%  extends 'base.html' %}
+
+{% block pagina %}
+
+        <!-- HEADER Section-->
+        {% include '_partials/header1.html' %}
+
+        <!-- INTRO  Section-->
+        {% include '_partials/intro.html' %}
+
+       <!-- SPONSOR  Section-->
+        {% include '_partials/sponsor.html' %}
+
+
+
+
+    <!-- Categorie -->
+        <div class="container">
+                <div class="card my-4">
+                    <h5 class="card-header"><i class="far fa-solid fa-comments"></i>  EVENT's AREA</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="{{ url_for('eventi_area', area='cinema') }}">Cinema</a></li>
+                                    <li><a href="{{ url_for('eventi_area', area='theater') }}">Theater</a></li>
+                                    <li><a href="{{ url_for('eventi_area', area='art') }}">Art</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="{{ url_for('eventi_area', area='games') }}">Games</a></li>
+                                    <li><a href="{{ url_for('eventi_area', area='dance') }}">Series</a></li>
+                                    <li><a href="{{ url_for('eventi_area', area='music') }}">Music</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+
+    <!-- EVENTI  Section-->
+     <section class="page-section portfolio" id="news">
+            <div class="container">
+
+                <div class="lb-surtitle left-aligned">
+                  <h2>All the Events</h2>
+                </div>
+
+                <!-- Grid Items-->
+                <div class="row justify-content-center">
+
+
+         {% for row in rows %}
+
+                    <!-- Evento -->
+                    <div class="col-md-6 col-lg-4">
+
+                        <div class="portfolio-item mx-auto" data-toggle="modal" >
+
+                             <a href="{{ url_for('evento', id=row["id"]) }}">
+
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            </a>
+                            <img class="img-fluid" src="../../static/assets/img/foto/{{row['immagine']}}" alt="{{ row["titolo"]}}" />
+
+                            <div class="lb-category">{{ row["area"]}}</div>
+                            <div class="lb-item-title">{{ row["titolo"]}}</div>
+                        </div>
+
+                    </div>
+
+         {% endfor %}
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+        </section>
+
+{% endblock %}
+
+

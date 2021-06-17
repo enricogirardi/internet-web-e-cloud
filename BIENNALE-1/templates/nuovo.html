@@ -1,0 +1,126 @@
+{%  extends 'base.html' %}
+
+{% block pagina %}
+    <div class='mtop5'></div>
+
+
+{% if not session['username'] %}
+
+
+
+    <div class="row mtop5 justify-content-center">
+
+        NON SEI AUTORIZZATO
+
+
+
+    </div>
+
+{% else %}
+
+    <div class="row mtop5  justify-content-center">
+
+         <div class="col-6 lb-surtitle left-aligned">
+          <h2>Aggiungi nuovo articolo: {{ tipologia }}</h2>
+        </div>
+    </div>
+
+
+
+
+<div class=" row justify-content-center">
+  <div class="col-md-4 col-md-offset-4">
+  <form method="POST" action="/nuovo/{{ tipologia }}" enctype="multipart/form-data">
+
+    <div class="form-group">
+      <label for="titolo">Titolo</label>
+      <input
+        type="text"
+        class="form-control"
+        id="titolo"
+        name="titolo"
+        placeholder="titolo qui"
+        value="titolo"
+      />
+    </div>
+
+    <div class="form-group">
+       <label for="descrizione">Descrizione</label>
+      <textarea
+        rows="10"
+        cols="40"
+        class="form-control"
+        id="descrizione"
+        name="descrizione"
+        placeholder="Descrizione qui"></textarea>
+    </div>
+
+
+
+
+     <div class="form-group">
+      <label for="immagine">Immagine</label>
+        Selezione una imagine da caricare:
+        <input
+          class="form-control"
+          type="file"
+          name="immagine"
+          id="immagine"
+        />
+
+
+      <label for="area">Area</label>
+      <select name="area" class="form-select form-control"  size="1" aria-label="size1 select " >
+              <option value="cinema">Cinema</option>
+              <option value="teatro">Teatro</option>
+              <option value="arte">Arte</option>
+              <option value="architettura">Architettura</option>
+              <option value="danza">Danza</option>
+              <option value="musica">Musica</option>
+      </select>
+
+
+    {% if tipologia == 'evento' %}
+      <label for="luogo">Luogo</label>
+      <select name="luogo" class="form-select form-control"  size="1" aria-label="size1 select " >
+              <option value="giardini">Giardini</option>
+              <option value="arsenale">Arsenale</option>
+              <option value="cagiustinian">Ca giustinian</option>
+              <option value="palazzo-cinema">Palazzo del cinema</option>
+              <option value="palazzo-casino">Palazzo del casinò</option>
+              <option value="palabiennale">Palabiennale</option>
+              <option value="sala-giardino">Sala giardino</option>
+      </select>
+     {% endif  %}
+
+
+
+
+    </div>
+
+
+
+    <button type="submit" class="btn btn-info text-uppercase">PUBBLICA {{ tipologia }}</button>
+  </form>
+ </div>
+</div>
+{% endif %}
+
+
+
+
+ <!-- MESSAGGGI ERRORE -->
+ <div class=" row justify-content-center">
+    <div class="col-md-4 col-md-offset-4">
+    {% for message in get_flashed_messages() %}
+      <div class="alert-error">{{ message }}</div>
+    {% endfor %}
+    </div>
+ </div>
+
+
+
+ <div class='mtop5'></div>
+{% include '_partials/header1.html' %}
+
+{% endblock %}

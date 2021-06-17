@@ -1,0 +1,156 @@
+{%  extends 'base.html' %}
+
+{% block pagina %}
+
+    <div class='mtop5'></div>
+
+   <!-- SPONSOR  Section-->
+    {% include '_partials/sponsor.html' %}
+
+    <!-- INTRO  Section-->
+    {% include '_partials/intro.html' %}
+
+
+         {% for row in rows %}
+    <!-- NOTIZIA Section-->
+    <section id="notizia">
+          <div class="container">
+            <div class="row">
+                <!-- Post content-->
+                <div class="col-lg-8">
+                    <!-- Title-->
+                    <h1 class="mt-4">{{ row["titolo"]}}</h1>
+                    <!-- image-->
+                    <img class="img-fluid" src="../../static/assets/img/foto/{{row['immagine']}}" alt="{{ row["titolo"]}}" />
+                    <hr />
+                    <!-- Post content-->
+                    <article>
+                    <p class="lead">{{ row["descrizione"]}}</p>
+                    </article>
+
+
+
+
+                </div>
+
+
+
+
+                <!-- Sidebar widgets column-->
+                <div class="col-md-4">
+
+
+                <!-- Luogo -->
+                    <div class="card my-4 text-align-center">
+                        <h5 class="card-header">
+                            <i class="fas fa-landmark"></i> LUOGO DELL'EVENTO</h5>
+                            <h6>
+                        {% if row["luogo"] == 'giardini' %}
+                            Giardini
+                            <!-- image-->
+                            <img class="img-fluid" src="../../static/assets/img/luoghi/sala-giardino.jpg" alt="Giardini" />
+                            <hr />
+                        {% elif row["luogo"] == 'arsenale' %}
+                            Arsenale
+                            <!-- image-->
+                            <img class="img-fluid" src="../../static/assets/img/luoghi/arsenale-x600.jpg" alt="Arsenale" />
+                        {% elif row["luogo"] == 'cagiustinian' %}
+                            Ca giustinian
+                            <!-- image-->
+                            <img class="img-fluid" src="../../static/assets/img/luoghi/salacolonne.jpg" alt="Ca giustinian" />
+                        {% elif row["luogo"] == 'palazzo-cinema' %}
+                             Palazzo del cinema
+                            <!-- image-->
+                            <img class="img-fluid" src="../../static/assets/img/luoghi/palazzo-cinema-2018.jpg" alt="Palazzo del cinema" />
+                        {% elif row["luogo"] == 'palazzo-casino' %}
+                            Palazzo del casinò
+                            <!-- image-->
+                            <img class="img-fluid" src="../../static/assets/img/luoghi/palazzo-del-casino-2018.jpg" alt="Palazzo del casinò" />
+                        {% elif row["luogo"] == 'palabiennale' %}
+                            Palabiennale
+                            <!-- image-->
+                            <img class="img-fluid" src="../../static/assets/img/luoghi/palabiennale-miniatura.jpg" alt="Palabiennale" />
+                        {% elif row["luogo"] == 'sala-giardino' %}
+                            Sala giardino
+                            <!-- image-->
+                            <img class="img-fluid" src="../../static/assets/img/luoghi/sala-giardino.jpg" alt="Sala giardino" />
+                        {% else %}
+                            Non definito
+                        {% endif  %}
+                            </h6>
+                    </div>
+{% endfor %}
+
+                    <!-- Eventi widget-->
+                    <div class="card my-4">
+                        <h5 class="card-header"><i class="far fa-solid fa-comments"></i>  AREE TEMATICHE EVENTI</h5>
+                        <!-- image-->
+                        <img class="img-fluid" src="../../static/assets/img/foto/room-with-a-view-b.jpg" alt="Eventi" />
+
+                        <div class="card-body">
+                            <div class="row">
+                     <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="{{ url_for('eventi_area', area='cinema') }}">Cinema</a></li>
+                                    <li><a href="{{ url_for('eventi_area', area='teatro') }}">Teatro</a></li>
+                                    <li><a href="{{ url_for('eventi_area', area='arte') }}">Arte</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="{{ url_for('eventi_area', area='architettura') }}">Architettura</a></li>
+                                    <li><a href="{{ url_for('eventi_area', area='danza') }}">Danza</a></li>
+                                    <li><a href="{{ url_for('eventi_area', area='musica') }}">Musica</a></li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Eventi widget-->
+
+                    <!-- Notizie widget-->
+                    <div class="card my-4">
+                        <h5 class="card-header"><i class="far fa-light fa-newspaper"></i>  AREE TEMATICHE NOTIZIE</h5>
+                        <!-- image-->
+                        <img class="img-fluid" src="../../static/assets/img/foto/redc-20.jpg" alt="Eventi" />
+
+                        <div class="card-body">
+                            <div class="row">
+                             <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="{{ url_for('notizie_area', area='cinema') }}">Cinema</a></li>
+                                    <li><a href="{{ url_for('notizie_area', area='teatro') }}">Teatro</a></li>
+                                    <li><a href="{{ url_for('notizie_area', area='arte') }}">Arte</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="{{ url_for('notizie_area', area='architettura') }}">Architettura</a></li>
+                                    <li><a href="{{ url_for('notizie_area', area='danza') }}">Danza</a></li>
+                                    <li><a href="{{ url_for('notizie_area', area='musica') }}">Musica</a></li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /Notizie widget-->
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- About Section-->
+    {% include '_partials/about.html' %}
+
+
+
+
+{% endblock %}
