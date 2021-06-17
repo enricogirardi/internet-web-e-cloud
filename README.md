@@ -37,7 +37,7 @@ e modificati i CSS.
 Lo spunto del clone è che, in ottica dell'ascesa dei Saas, 
 basterà lo stesso tema di base per tipologie di siti totalmente diversi fra loro, 
 tenendo uguale la struttura, che sarà sempre la stessa sopratutto in ottica 
-mobile first, o con poche semplici varianti. 
+"*Mobile First*", o con poche semplici varianti. 
 
 
 ### 3)  Episodio IX - L'ascesa dei SaaS
