@@ -50,7 +50,7 @@ https://github.com/enricogirardi/internet-web-e-cloud/blob/main/3.%20Saas_%20_in
 
 In questa slide si propone una piccola tesi: quella degli ultimi CMS che saranno 
 soppiantati a breve dai servizi Saas, rendendo de facto __inutile la competenza tecnica__
-per la maggior parte dei siti web "di base" a competenza delle **PMI (piccole medio imprese)**, 
+per la maggior parte dei siti web "di base" a competenza delle **PMI (piccole medio imprese)**, salvo script di "bridge" fra API di divers Saas, 
 e facendo sopravvivere solamente le poche eccellenze tecniche in riferimento ad **aziende medio grandi**. 
 
 
