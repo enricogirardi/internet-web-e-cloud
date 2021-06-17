@@ -13,8 +13,6 @@ pip install flask_login
 
 # IL PROGETTO SAGA
 
-========================
-
 *Il progetto  consta di quattro  parti:* 
 
 
