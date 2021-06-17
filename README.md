@@ -46,7 +46,7 @@ e facendo sopravvivere solamente le poche eccellenze in riferimento ad aziende m
 
 4) Episodio V - La Blacklist colpisce ancora
 ========================
-Sconfitti definitivamente dai Saas ì, che sono effettivamente più sicuri, 
+Sconfitti definitivamente dai Saas, che sono effettivamente più sicuri, 
 analizziamo uno dei rischi dei CMS tradizionali. 
 In definitiva, uno dei pro decisamente importante dei Saas, sarà proprio
 quello della sicurezza.
