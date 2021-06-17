@@ -40,7 +40,7 @@ mobile first, o con poche semplici varianti.
 In questa slide si propone una piccola tesi: quella degli ultimi CMS che saranno 
 soppiantati a breve dai servizi Saas, rendendo de facto inutile la competenza tecnica
 per la maggior parte dei siti web "di base" a competenza delle PMI (piccole medio imprese), 
-e facendo sopravvivere solamente le poche eccellenze in riferimento ad aziende medio grandi. 
+e facendo sopravvivere solamente le poche eccellenze tecniche in riferimento ad aziende medio grandi. 
 
 
 
