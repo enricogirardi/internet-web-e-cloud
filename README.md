@@ -43,6 +43,7 @@ mobile first, o con poche semplici varianti.
 ### 3)  Episodio IX - L'ascesa dei SaaS
 
 ================================================
+
 SLIDE:
 
 https://github.com/enricogirardi/internet-web-e-cloud/blob/main/3.%20Saas_%20_in%20morte%20di%20una%20Web%20Agency_.pdf
@@ -57,6 +58,7 @@ e facendo sopravvivere solamente le poche eccellenze tecniche in riferimento ad 
 ### 4) Episodio V - La Blacklist colpisce ancora
 
 ================================================
+
 SLIDE:
 
 https://github.com/enricogirardi/internet-web-e-cloud/blob/main/4.%20DNS%20e%20IP%20BLACKLIST.pdf
