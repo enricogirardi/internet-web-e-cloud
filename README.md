@@ -18,7 +18,7 @@ Il progetto  consta di quattro  parti:
 
 1) Episodio VIII - Gli ultimi CMS
 ========================
-la prima parte comincia il sito de LaBiennale, 
+la prima parte comincia dal sito de LaBiennale, 
 interamente progettato in Flask partendo da strumenti di base 
 come il template "startbootstrap-freelancer-gh-pages" scaricabile da qui: 
 https://startbootstrap.com/theme/freelancer
